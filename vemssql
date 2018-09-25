@@ -1,0 +1,25 @@
+create table permin  (year int, mon  int, day  int, hour  int, min  int, p1c1  DECIMAL(6,3), p1c2  DECIMAL(6,3), p1c3  DECIMAL(6,3), p1c4  DECIMAL(6,3), p2c1  DECIMAL(6,3), p2c2  DECIMAL(6,3), p2c3  DECIMAL(6,3), p2c4  DECIMAL(6,3), p3c1  DECIMAL(6,3), p3c2  DECIMAL(6,3), p3c3  DECIMAL(6,3), p3c4  DECIMAL(6,3), p4c1  DECIMAL(6,3), p4c2  DECIMAL(6,3), p4c3  DECIMAL(6,3), p4c4  DECIMAL(6,3), p5c1  DECIMAL(6,3), p5c2  DECIMAL(6,3), p5c3  DECIMAL(6,3), p5c4  DECIMAL(6,3), ai1  DECIMAL(6,3), ai2  DECIMAL(6,3), ai3  DECIMAL(6,3), ai4  DECIMAL(6,3), ai5  DECIMAL(6,3), ai6  DECIMAL(6,3), ai7  DECIMAL(6,3), ai8  DECIMAL(6,3), ai9  DECIMAL(6,3), ai10  DECIMAL(6,3), ai11  DECIMAL(6,3), ai12  DECIMAL(6,3), ai13  DECIMAL(6,3), ai14  DECIMAL(6,3), ai15  DECIMAL(6,3));
+
+
+
+insert into vems_test.permin
+(year, mon, day, hour, min
+, p1c1, p1c2, p1c3, p1c4
+, p2c1, p2c2, p2c3, p2c4
+, p3c1, p3c2, p3c3, p3c4
+, p4c1, p4c2, p4c3, p4c4
+, p5c1, p5c2, p5c3, p5c4
+, ai1, ai2, ai3, ai4, ai5, ai6, ai7
+, ai8, ai9, ai10, ai11, ai12, ai13
+, ai14, ai15 )
+values
+ (
+  ${out['trend_p1']['1_year']},${out['trend_p1']['1_mon']},${out['trend_p1']['1_day']},${out['trend_p1']['1_hour']},${out['trend_p1']['1_min']},
+  ${out['trend_p1']['1_ch1']},${out['trend_p1']['1_ch2']},${out['trend_p1']['1_ch3']},${out['trend_p1']['1_ch4']}, 
+  ${out['trend_p2']['2_ch1']},${out['trend_p2']['2_ch2']},${out['trend_p2']['2_ch3']},${out['trend_p2']['2_ch4']}, 
+  ${out['trend_p3']['3_ch1']},${out['trend_p3']['3_ch2']},${out['trend_p3']['3_ch3']},${out['trend_p3']['3_ch4']}, 
+  ${out['trend_p4']['4_ch1']},${out['trend_p4']['4_ch2']},${out['trend_p4']['4_ch3']},${out['trend_p4']['4_ch4']}, 
+  ${out['trend_p5']['5_ch1']},${out['trend_p5']['5_ch2']},${out['trend_p5']['5_ch3']},${out['trend_p5']['5_ch4']}, 
+  ${out['ai'][0]},${out['ai'][1]},${out['ai'][2]},${out['ai'][3]},${out['ai'][4]},${out['ai'][5]},${out['ai'][6]},
+  ${out['ai'][7]},${out['ai'][8]},${out['ai'][9]},${out['ai'][10]},${out['ai'][11]},${out['ai'][12]},
+  ${out['ai'][13]},${out['ai'][14]})
